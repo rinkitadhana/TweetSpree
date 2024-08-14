@@ -3,6 +3,7 @@ import { FaStar } from "react-icons/fa";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Footer from "../parts/Footer";
 import Post from "../parts/Post";
+import Advice from "./Advice";
 
 const Home = () => {
   return (
@@ -32,10 +33,21 @@ const Home = () => {
               <FaArrowRightLong className=" text-sm" />
             </div>
           </div>
-          <Post />
-          <Post />
-          <Post />
-          <Post />
+          <Post
+            des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam sed
+              ab dicta debitis, provident earum architecto repellat, voluptatum
+              porro enim cumque eius!"
+          />
+          <Post
+            des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam sed
+              ab dicta debitis, provident earum architecto repellat, voluptatum
+              porro enim cumque eius!"
+          />
+          <Post
+            des="Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam sed
+              ab dicta debitis, provident earum architecto repellat, voluptatum
+              porro enim cumque eius!"
+          />
 
           <Footer />
         </div>

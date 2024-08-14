@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import Post from "../parts/Post";
 
 class Advice extends React.Component {
   state = {
@@ -26,13 +27,11 @@ class Advice extends React.Component {
   render() {
     return (
       <div className="">
-        <div className="">
-          <h1 className="">{this.state.advice}</h1>
+        <Post advice={this.state.advice} />
 
-          <button className="" onClick={this.fetchAdvice}>
-            <span>GIVE ME ADVICE!</span>
-          </button>
-        </div>
+        <button className="" onClick={this.fetchAdvice}>
+          <span>GIVE ME ADVICE!</span>
+        </button>
       </div>
     );
   }
