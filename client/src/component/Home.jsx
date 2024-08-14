@@ -21,7 +21,7 @@ const Home = () => {
     setIsVisible(true);
     setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 1500);
     setLoading(true);
     fetchContent();
   };
@@ -57,12 +57,17 @@ const Home = () => {
             </div>
           </div>
           <div>
-            <div className=" font-bricolage md:text-6xl font-bold  md:mt-14 mt-8 text-3xl px-2 md:px-0   text-center">
+            <div className=" font-bricolage md:text-6xl font-bold  mt-6 text-3xl px-2 md:px-0   text-center">
               This <span className=" ">project</span> will generate{" "}
               <span className=" text-green-400">quotes</span>,{" "}
               <span className=" text-green-400">advice</span>, and{" "}
               <span className=" text-green-400">fun questions</span> to increase
               your <span className=" text-pink-500">Twitter engagement!</span>
+            </div>
+            <div className="text-center md:px-20 px-2 text-sm md:text-base mt-4 tracking-tight font-bricolage">
+              Get 100% engagement guaranteed. Click generate, post, and watch
+              your Twitter blow up! No more guesswork—just instant results that
+              make your feed stand out.
             </div>
           </div>
           <div className=" flex justify-center mt-7">
