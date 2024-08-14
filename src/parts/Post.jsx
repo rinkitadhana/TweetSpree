@@ -32,7 +32,7 @@ const Post = (props) => {
               </div>
               <div>{props.des}</div>
               <div className="mt-2">
-                <div className=" flex flex-row justify-between ">
+                <div className=" flex flex-row justify-between text-sm md:text-base">
                   <div className=" flex flex-row items-center gap-1 hover:text-blue-400 cursor-pointer">
                     <FaRegComment /> <div className="text-base"> 1.2k</div>
                   </div>
