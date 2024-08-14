@@ -22,8 +22,10 @@ const Post = (props) => {
                     Rinkit Adhana
                   </div>
                   <div className=" text-gray-400">@rnkktt</div>
-                  {"."}
-                  <div className=" text-gray-400  hover:underline">Aug 7</div>
+
+                  <div className="hidden md:block text-gray-400  hover:underline">
+                    . Aug 7
+                  </div>
                 </div>
                 <div
                   onClick={props.post}
@@ -35,7 +37,7 @@ const Post = (props) => {
               </div>
               <div>{props.des}</div>
               <div className="mt-2">
-                <div className=" flex flex-row justify-between text-sm md:text-base">
+                <div className=" flex flex-row justify-between text-xs md:text-base">
                   <div className=" flex flex-row items-center gap-1 hover:text-blue-400 cursor-pointer">
                     <FaRegComment /> <div className="text-base"> 1.2k</div>
                   </div>
@@ -48,7 +50,7 @@ const Post = (props) => {
                   <div className=" flex flex-row items-center gap-1 hover:text-blue-400 cursor-pointer">
                     <VscGraph /> <div className="text-base"> 1.2k</div>
                   </div>
-                  <div className=" flex flex-row items-center gap-1 hover:text-blue-400 cursor-pointer">
+                  <div className="hidden md:flex flex-row items-center gap-1 hover:text-blue-400 cursor-pointer">
                     <FaRegBookmark /> <div className="text-base"> 1.2k</div>
                   </div>
                 </div>

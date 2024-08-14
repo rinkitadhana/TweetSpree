@@ -6,6 +6,7 @@ import Post from "../parts/Post";
 
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import Skeleton from "../parts/Skeleton";
 
 const Home = () => {
   const [content, setContent] = useState({
@@ -13,6 +14,17 @@ const Home = () => {
     advice: "",
     funQuestion: "",
   });
+  const [loading, setLoading] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
+
+  const showDiv = () => {
+    setIsVisible(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+    setLoading(true);
+    fetchContent();
+  };
 
   const fetchContent = async () => {
     try {
@@ -55,7 +67,7 @@ const Home = () => {
           </div>
           <div className=" flex justify-center mt-7">
             <div
-              onClick={fetchContent}
+              onClick={showDiv}
               className=" mb-5 bg-blue-500 hover:bg-blue-400 w-fit rounded-md py-1 px-3 cursor-pointer font-semibold text-lg flex flex-row gap-1 items-center"
             >
               <BsStars className="text-yellow-400" />
@@ -63,20 +75,36 @@ const Home = () => {
               <FaArrowRightLong className=" text-sm" />
             </div>
           </div>
-          <Post
-            des={content.quote}
-            post={() => shareOnTwitter(`Quote: "${content.quote}"`)}
-          />
-          <Post
-            des={content.advice}
-            post={() => shareOnTwitter(`Advice: "${content.advice}"`)}
-          />
-          <Post
-            des={content.funQuestion}
-            post={() =>
-              shareOnTwitter(`Fun Question: "${content.funQuestion}"`)
-            }
-          />
+          {isVisible && (
+            <div>
+              {loading ? (
+                <Skeleton />
+              ) : (
+                <Post
+                  des={content.quote}
+                  post={() => shareOnTwitter(`Quote: "${content.quote}"`)}
+                />
+              )}
+              {loading ? (
+                <Skeleton />
+              ) : (
+                <Post
+                  des={content.advice}
+                  post={() => shareOnTwitter(`Advice: "${content.advice}"`)}
+                />
+              )}
+              {loading ? (
+                <Skeleton />
+              ) : (
+                <Post
+                  des={content.funQuestion}
+                  post={() =>
+                    shareOnTwitter(`Fun Question: "${content.funQuestion}"`)
+                  }
+                />
+              )}
+            </div>
+          )}
 
           <Footer />
         </div>
