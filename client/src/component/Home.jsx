@@ -50,7 +50,9 @@ const Home = () => {
       <div className="flex justify-center md:flex-row flex-col text-white">
         <div className=" md:w-3/5  min-h-screen">
           <div className=" flex flex-row justify-between px-4 mt-8">
-            <div className="  font-semibold text-3xl font-bricolage">Tweet</div>
+            <div className="  font-semibold text-3xl font-bricolage">
+              Tweet<span className="text-pink-500">Spree</span>
+            </div>
             <div className=" flex flex-row gap-1 items-center bg-white/40 hover:bg-white/30 w-fit rounded-md p-1 px-2 text-sm font-semibold text-white hover:cursor-pointer">
               <FaStar className="text-yellow-400" />
               On Github
@@ -67,7 +69,7 @@ const Home = () => {
             <div className="text-center md:px-20 px-2 text-sm md:text-base mt-4 tracking-tight font-bricolage">
               Get 100% engagement guaranteed. Click generate, post, and watch
               your Twitter blow up! No more guesswork—just instant results that
-              make your feed stand out.
+              make your feed stand out..🔥
             </div>
           </div>
           <div className=" flex justify-center mt-7">
