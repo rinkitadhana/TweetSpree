@@ -95,11 +95,7 @@ const Home = () => {
                   ) : (
                     <Post
                       des={question}
-                      post={() =>
-                        shareOnTwitter(
-                          `${question} - Created with TweetSpree[therinkit-tweetspree.vercel.app]`
-                        )
-                      }
+                      post={() => shareOnTwitter(`${question}`)}
                     />
                   )}
                 </div>
