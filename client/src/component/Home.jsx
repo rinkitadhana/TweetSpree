@@ -65,8 +65,8 @@ const Home = () => {
               make your feed stand out..🔥
             </div>
             <div className=" flex justify-center">
-              <div className="font-semibold text-purple-400 mt-2 flex flex-row gap-1 items-center">
-                All posts are generated with the assistance of AI{" "}
+              <div className="font-semibold text-purple-400 mt-2 flex flex-row gap-1 items-center text-xs md:base">
+                All posts are generated with the assistance of AI
                 <BsStars className="text-yellow-400" />
               </div>
             </div>
