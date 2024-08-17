@@ -51,18 +51,24 @@ const Home = () => {
             </div>
           </div>
           <div>
-            <div className=" font-bricolage md:text-6xl font-bold  mt-10 text-3xl px-2 md:px-0   text-center">
+            <div className=" font-bricolage md:text-6xl font-bold  mt-10 text-4xl px-2 md:px-0   text-center">
               This <span className=" ">project</span> will generate{" "}
               <span className=" text-green-400">facts</span>,{" "}
               <span className=" text-green-400">advice</span>, and{" "}
               <span className=" text-green-400">fun questions</span> about
-              programing to increase your{" "}
+              programing to boost your{" "}
               <span className=" text-pink-500">Twitter engagement!</span>
             </div>
             <div className="text-center md:px-36 px-2 text-sm md:text-base mt-4 tracking-tight font-bricolage">
               Get 100% engagement guaranteed. Click generate, post, and watch
               your Twitter blow up! No more guesswork—just instant results that
               make your feed stand out..🔥
+            </div>
+            <div className=" flex justify-center">
+              <div className="font-semibold text-purple-400 mt-2 flex flex-row gap-1 items-center">
+                All posts are generated with the assistance of AI{" "}
+                <BsStars className="text-yellow-400" />
+              </div>
             </div>
           </div>
           <div className=" flex justify-center mt-7">
