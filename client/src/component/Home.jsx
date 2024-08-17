@@ -57,8 +57,7 @@ const Home = () => {
           </div>
           <div>
             <div className=" font-bricolage md:text-6xl font-bold  mt-10 text-4xl px-2 md:px-0   text-center">
-              This <span className=" ">project</span> will generate{" "}
-              <span className=" text-green-400">facts</span>,{" "}
+              Get <span className=" text-green-400">facts</span>,{" "}
               <span className=" text-green-400">advice</span>, and{" "}
               <span className=" text-green-400">fun questions</span> about
               programing to boost your{" "}

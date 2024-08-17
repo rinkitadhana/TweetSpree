@@ -28,7 +28,7 @@ const Post = (props) => {
           <div className="flex flex-row gap-3 items-start">
             <img
               className=" rounded-full size-10 border border-gray-600 "
-              src="https://media.licdn.com/dms/image/v2/D4E0BAQG-i2j7Q2WFIA/company-logo_200_200/company-logo_200_200/0/1694593112031/img_logo?e=2147483647&v=beta&t=EPGRytuEOVPFLctZkKdIxLl_1W7QhVFrLeS-GwWjJj0"
+              src="./userIMG/dp.jpeg"
               alt="profile-pic"
             />
 
@@ -38,10 +38,9 @@ const Post = (props) => {
                   <div className=" md:text-[1.110rem] font-semibold hover:underline">
                     Rinkit Adhana
                   </div>
-                  <div className=" text-gray-400">@rnkktt</div>
-
+                  <div className=" text-gray-400">@rnkktt ·</div>
                   <div className="hidden md:block text-gray-400  hover:underline">
-                    . {todayMonth} {todayDate}
+                    {todayMonth} {todayDate}
                   </div>
                 </div>
                 <div
