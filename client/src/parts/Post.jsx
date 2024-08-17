@@ -4,6 +4,23 @@ import { RiRepeatLine } from "react-icons/ri";
 import { VscGraph } from "react-icons/vsc";
 
 const Post = (props) => {
+  const month = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  const date = new Date();
+  const todayDate = date.getDate();
+  const todayMonth = month[date.getMonth()];
   return (
     <div className=" mt-3">
       <div className=" flex justify-center md:flex-row flex-col cursor-pointer">
@@ -24,7 +41,7 @@ const Post = (props) => {
                   <div className=" text-gray-400">@rnkktt</div>
 
                   <div className="hidden md:block text-gray-400  hover:underline">
-                    . Aug 7
+                    . {todayMonth} {todayDate}
                   </div>
                 </div>
                 <div
