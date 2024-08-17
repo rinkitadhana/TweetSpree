@@ -45,10 +45,15 @@ const Home = () => {
             <div className="  font-semibold text-3xl font-bricolage">
               Tweet<span className="text-pink-500">Spree</span>
             </div>
-            <div className=" flex flex-row gap-1 items-center bg-white/40 hover:bg-white/30 w-fit rounded-md p-1 px-2 text-sm font-semibold text-white hover:cursor-pointer">
-              <FaStar className="text-yellow-400" />
-              On Github
-            </div>
+            <a
+              href="https://github.com/rinkitadhana/TweetSpree"
+              target="_blank"
+            >
+              <div className=" flex flex-row gap-1 items-center bg-white/40 hover:bg-white/30 w-fit rounded-md p-1 px-2 text-sm font-semibold text-white hover:cursor-pointer">
+                <FaStar className="text-yellow-400" />
+                On Github
+              </div>
+            </a>
           </div>
           <div>
             <div className=" font-bricolage md:text-6xl font-bold  mt-10 text-4xl px-2 md:px-0   text-center">
