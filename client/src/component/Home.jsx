@@ -3,19 +3,24 @@ import { FaStar } from "react-icons/fa";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Footer from "../parts/Footer";
 import Post from "../parts/Post";
-
+import Data from "../parts/Data";
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import Skeleton from "../parts/Skeleton";
 
 const Home = () => {
-  const [content, setContent] = useState({
-    quote: "",
-    advice: "",
-    funQuestion: "",
-  });
   const [loading, setLoading] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
+  const [randomQuestions, setRandomQuestions] = useState([]);
+
+  const generateRandomQuestions = () => {
+    const shuffledQuestions = Data.sort(() => 0.5 - Math.random());
+    const selectedQuestions = shuffledQuestions.slice(0, 5);
+    setRandomQuestions(selectedQuestions);
+  };
+
+  useEffect(() => {
+    generateRandomQuestions(); // Generate questions when the component first mounts
+  }, []);
 
   const showDiv = () => {
     setIsVisible(true);
@@ -23,21 +28,8 @@ const Home = () => {
       setLoading(false);
     }, 1500);
     setLoading(true);
-    fetchContent();
+    generateRandomQuestions();
   };
-
-  const fetchContent = async () => {
-    try {
-      const response = await axios.get("http://localhost:5000/api/random");
-      setContent(response.data);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  };
-
-  useEffect(() => {
-    fetchContent();
-  }, []);
 
   const shareOnTwitter = (text) => {
     const twitterBaseUrl = "https://twitter.com/intent/tweet?text=";
@@ -59,14 +51,15 @@ const Home = () => {
             </div>
           </div>
           <div>
-            <div className=" font-bricolage md:text-6xl font-bold  mt-6 text-3xl px-2 md:px-0   text-center">
+            <div className=" font-bricolage md:text-6xl font-bold  mt-10 text-3xl px-2 md:px-0   text-center">
               This <span className=" ">project</span> will generate{" "}
-              <span className=" text-green-400">quotes</span>,{" "}
+              <span className=" text-green-400">facts</span>,{" "}
               <span className=" text-green-400">advice</span>, and{" "}
-              <span className=" text-green-400">fun questions</span> to increase
-              your <span className=" text-pink-500">Twitter engagement!</span>
+              <span className=" text-green-400">fun questions</span> about
+              programing to increase your{" "}
+              <span className=" text-pink-500">Twitter engagement!</span>
             </div>
-            <div className="text-center md:px-20 px-2 text-sm md:text-base mt-4 tracking-tight font-bricolage">
+            <div className="text-center md:px-36 px-2 text-sm md:text-base mt-4 tracking-tight font-bricolage">
               Get 100% engagement guaranteed. Click generate, post, and watch
               your Twitter blow up! No more guesswork—just instant results that
               make your feed stand out..🔥
@@ -84,32 +77,22 @@ const Home = () => {
           </div>
           {isVisible && (
             <div>
-              {loading ? (
-                <Skeleton />
-              ) : (
-                <Post
-                  des={content.quote}
-                  post={() => shareOnTwitter(`Quote: "${content.quote}"`)}
-                />
-              )}
-              {loading ? (
-                <Skeleton />
-              ) : (
-                <Post
-                  des={content.advice}
-                  post={() => shareOnTwitter(`Advice: "${content.advice}"`)}
-                />
-              )}
-              {loading ? (
-                <Skeleton />
-              ) : (
-                <Post
-                  des={content.funQuestion}
-                  post={() =>
-                    shareOnTwitter(`Fun Question: "${content.funQuestion}"`)
-                  }
-                />
-              )}
+              {randomQuestions.map((question, index) => (
+                <div key={index}>
+                  {loading ? (
+                    <Skeleton />
+                  ) : (
+                    <Post
+                      des={question}
+                      post={() =>
+                        shareOnTwitter(
+                          `${question} - Created with TweetSpree[therinkit-tweetspree.vercel.app]`
+                        )
+                      }
+                    />
+                  )}
+                </div>
+              ))}
             </div>
           )}
 
