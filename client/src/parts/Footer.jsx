@@ -3,7 +3,7 @@ const Footer = () => {
     <div className=" mt-16 mb-3">
       <div className="flex flex-col items-center font-semibold text-white">
         <div>Thank you for Visiting!</div>
-        <div>©2024 Tweet || All Rights Reserved</div>
+        <div>©2024 TweetSpree</div>
         <div>
           Made by{" "}
           <a
@@ -16,7 +16,7 @@ const Footer = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
