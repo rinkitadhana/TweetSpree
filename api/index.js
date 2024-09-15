@@ -7,6 +7,9 @@ const PORT = 3000
 app.get("/api/data", (req, res) => {
   res.send(Data)
 })
+app.get("/", (req, res) => {
+  res.send("Hello")
+})
 
 app.listen(PORT, () => {
   console.log(`Listening on http://localhost:${PORT}/api/data`)
