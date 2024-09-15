@@ -6,14 +6,24 @@ import Post from "../parts/Post"
 import Data from "../parts/Data"
 import React, { useEffect, useState } from "react"
 import Skeleton from "../parts/Skeleton"
+import axios from "axios"
 
 const Home = () => {
   const [loading, setLoading] = useState(true)
   const [isVisible, setIsVisible] = useState(false)
   const [randomQuestions, setRandomQuestions] = useState([])
+  const [data, setData] = useState([])
 
+  useEffect(() => {
+    axios
+      .get("/api/data")
+      .then((Response) => [setData(Response.data)])
+      .catch((error) => {
+        console.log(error)
+      })
+  })
   const generateRandomQuestions = () => {
-    const shuffledQuestions = Data.sort(() => 0.5 - Math.random())
+    const shuffledQuestions = data.sort(() => 0.5 - Math.random())
     const selectedQuestions = shuffledQuestions.slice(0, 5)
     setRandomQuestions(selectedQuestions)
   }
