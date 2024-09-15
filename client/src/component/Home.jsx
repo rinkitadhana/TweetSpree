@@ -59,8 +59,8 @@ const Home = () => {
               href="https://github.com/rinkitadhana/TweetSpree"
               target="_blank"
             >
-              <div className=" flex flex-row gap-1 items-center bg-white/40 hover:bg-white/30 w-fit rounded-md p-1 px-2 text-sm font-semibold text-white hover:cursor-pointer">
-                <FaStar className="text-yellow-400" />
+              <div className=" flex flex-row gap-1 items-center bg-white/40 hover:bg-white/30 w-fit rounded-md p-2 text-sm font-semibold text-white hover:cursor-pointer">
+                <FaStar className="text-yellow-400 text-lg" />
                 On Github
               </div>
             </a>
