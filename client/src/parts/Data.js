@@ -1,5 +1,5 @@
 // src/sillyQuestions.js
-const Data = [
+const Dummies = [
   "Why did the programmer go to therapy? To get rid of their stack overflow.",
   "Coding is like playing chess with yourself. The only problem is, you always know the moves.",
   "Why did the developer go broke? Because they invested in too many arrays.",

@@ -1,51 +1,52 @@
-import { BsStars } from "react-icons/bs"
-import { FaStar } from "react-icons/fa"
-import { FaArrowRightLong } from "react-icons/fa6"
-import Footer from "../parts/Footer"
-import Post from "../parts/Post"
-import React, { useEffect, useState } from "react"
-import Skeleton from "../parts/Skeleton"
-import axios from "axios"
+import { BsStars } from "react-icons/bs";
+import { FaStar } from "react-icons/fa";
+import { FaArrowRightLong } from "react-icons/fa6";
+import Footer from "../parts/Footer";
+import Post from "../parts/Post";
+import React, { useEffect, useState } from "react";
+import Skeleton from "../parts/Skeleton";
+import axios from "axios";
+import Dummies from "../parts/Data";
 
 const Home = () => {
-  const [loading, setLoading] = useState(true)
-  const [isVisible, setIsVisible] = useState(false)
-  const [randomQuestions, setRandomQuestions] = useState([])
-  const [data, setData] = useState([])
+  const [loading, setLoading] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
+  const [randomQuestions, setRandomQuestions] = useState([]);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     axios
       .get("/api/data")
       .then((Response) => [setData(Response.data)])
       .catch((error) => {
-        console.log(error)
-      })
-  })
+        console.log(error);
+      });
+  });
   const generateRandomQuestions = () => {
-    const shuffledQuestions = data.sort(() => 0.5 - Math.random())
-    const selectedQuestions = shuffledQuestions.slice(0, 5)
-    setRandomQuestions(selectedQuestions)
-  }
+    const shuffledQuestions = Dummies.sort(() => 0.5 - Math.random());
+    const selectedQuestions = shuffledQuestions.slice(0, 5);
+    setRandomQuestions(selectedQuestions);
+  };
 
   useEffect(() => {
-    generateRandomQuestions() // Generate questions when the component first mounts
-  }, [])
+    generateRandomQuestions(); // Generate questions when the component first mounts
+  }, []);
 
   const showDiv = () => {
-    setIsVisible(true)
+    setIsVisible(true);
     setTimeout(() => {
-      setLoading(false)
-    }, 1500)
-    setLoading(true)
-    generateRandomQuestions()
-  }
+      setLoading(false);
+    }, 1500);
+    setLoading(true);
+    generateRandomQuestions();
+  };
 
   const shareOnTwitter = (text) => {
-    const twitterBaseUrl = "https://twitter.com/intent/tweet?text="
-    const tweetText = encodeURIComponent(text)
-    const url = `${twitterBaseUrl}${tweetText}`
-    window.open(url, "_blank")
-  }
+    const twitterBaseUrl = "https://twitter.com/intent/tweet?text=";
+    const tweetText = encodeURIComponent(text);
+    const url = `${twitterBaseUrl}${tweetText}`;
+    window.open(url, "_blank");
+  };
   return (
     <div className=" dark">
       <div className="flex justify-center md:flex-row flex-col text-white">
@@ -114,7 +115,7 @@ const Home = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
