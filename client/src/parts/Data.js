@@ -558,6 +558,6 @@ const Dummies = [
   "There is no Ctrl-Z in life.",
   "Whitespace is never white.",
   "When all else fails … reboot.",
-];
+]
 
-export default Data;
+export default Dummies
