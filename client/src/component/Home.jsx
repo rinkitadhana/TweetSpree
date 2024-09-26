@@ -16,7 +16,7 @@ const Home = () => {
 
   useEffect(() => {
     axios
-      .get("/api/data")
+      .get("https://tweet-spree-api.vercel.app/api/data")
       .then((Response) => [setData(Response.data)])
       .catch((error) => {
         console.log(error);
