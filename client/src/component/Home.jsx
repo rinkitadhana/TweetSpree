@@ -23,7 +23,7 @@ const Home = () => {
       });
   });
   const generateRandomQuestions = () => {
-    const shuffledQuestions = data.sort(() => 0.5 - Math.random());
+    const shuffledQuestions = Dummies.sort(() => 0.5 - Math.random());
     const selectedQuestions = shuffledQuestions.slice(0, 5);
     setRandomQuestions(selectedQuestions);
   };
