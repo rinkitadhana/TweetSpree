@@ -16,14 +16,14 @@ const Home = () => {
 
   useEffect(() => {
     axios
-      .get("https://tweet-spree-api.vercel.app/api/data")
+      .get("http://localhost:3000/api/data")
       .then((Response) => [setData(Response.data)])
       .catch((error) => {
         console.log(error);
       });
   });
   const generateRandomQuestions = () => {
-    const shuffledQuestions = Dummies.sort(() => 0.5 - Math.random());
+    const shuffledQuestions = data.sort(() => 0.5 - Math.random());
     const selectedQuestions = shuffledQuestions.slice(0, 5);
     setRandomQuestions(selectedQuestions);
   };
