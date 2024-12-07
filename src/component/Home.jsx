@@ -54,11 +54,10 @@ const Home = () => {
                 Click generate, post, and watch your Twitter blow up! No more
                 guesswork—just instant results that make your feed stand out..🔥
               </div>
-              <div className=" flex justify-center">
-                <div className="  font-semibold text-purple-400  flex flex-row gap-1 items-center text-xs md:text-base">
+              <div className=" px-4  flex   justify-center">
+                <div className=" flex gap-1 text-center items-center  font-semibold text-purple-400    text-xs md:text-base">
                   Posts are generated from stored data, sourced from various
-                  sites, and AI
-                  <BsStars className="text-yellow-400" />
+                  sites, and AI ✨
                 </div>
               </div>
 
