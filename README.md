@@ -64,7 +64,7 @@ A project to boost your Twitter engagement by generating a variety of programmin
 ###  Screenshots
 
 <div align="center"> 
-  <img src="https://github.com/user-attachments/assets/d5a9e1c3-9ce7-44fd-ab03-dcec5bb0eee0" alt="screenshot" />
+  <img src="https://github.com/user-attachments/assets/a05c22f5-fa02-41fc-b124-74a571c79adb" alt="screenshot" />
 </div>
 
 
