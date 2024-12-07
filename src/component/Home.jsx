@@ -56,8 +56,8 @@ const Home = () => {
               </div>
               <div className=" px-4  flex   justify-center">
                 <div className=" flex gap-1 text-center items-center  font-semibold text-purple-400    text-xs md:text-base">
-                  Posts are generated from stored data, sourced from various
-                  sites, and AI ✨
+                  All the posts are generated from stored data, sourced from
+                  various sites, and AI ✨
                 </div>
               </div>
 
