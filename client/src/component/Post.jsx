@@ -1,7 +1,7 @@
-import { FaRegBookmark, FaRegComment, FaRegHeart } from "react-icons/fa";
-import { FiShare } from "react-icons/fi";
-import { RiRepeatLine } from "react-icons/ri";
-import { VscGraph } from "react-icons/vsc";
+import { FaRegBookmark, FaRegComment, FaRegHeart } from "react-icons/fa"
+import { FiShare } from "react-icons/fi"
+import { RiRepeatLine } from "react-icons/ri"
+import { VscGraph } from "react-icons/vsc"
 
 const Post = (props) => {
   const month = [
@@ -17,10 +17,10 @@ const Post = (props) => {
     "Oct",
     "Nov",
     "Dec",
-  ];
-  const date = new Date();
-  const todayDate = date.getDate();
-  const todayMonth = month[date.getMonth()];
+  ]
+  const date = new Date()
+  const todayDate = date.getDate()
+  const todayMonth = month[date.getMonth()]
   return (
     <div className=" mt-3">
       <div className=" flex justify-center md:flex-row flex-col cursor-pointer">
@@ -36,9 +36,9 @@ const Post = (props) => {
               <div className=" flex flex-row justify-between">
                 <div className="flex flex-row gap-1">
                   <div className=" md:text-[1.110rem] font-semibold hover:underline">
-                    Rinkit Adhana
+                    Gruz
                   </div>
-                  <div className=" text-gray-400">@rnkktt ·</div>
+                  <div className=" text-gray-400">@damnGruz ·</div>
                   <div className="hidden md:block text-gray-400  hover:underline">
                     {todayMonth} {todayDate}
                   </div>
@@ -54,20 +54,29 @@ const Post = (props) => {
               <div>{props.des}</div>
               <div className="mt-2">
                 <div className=" flex flex-row justify-between text-xs md:text-base">
-                  <div className=" flex flex-row items-center gap-1 hover:text-blue-400 cursor-pointer">
-                    <FaRegComment /> <div className="text-base"> 1.2k</div>
+                  <div className=" flex flex-row items-center md:gap-1 gap-0.5 hover:text-blue-400 cursor-pointer">
+                    <FaRegComment />{" "}
+                    <div className="md:text-base text-sm"> 1.2k</div>
                   </div>
-                  <div className=" flex flex-row items-center gap-1 hover:text-green-400 cursor-pointer">
-                    <RiRepeatLine /> <div className="text-base"> 1.2k</div>
+                  <div className=" flex flex-row items-center md:gap-1 gap-0.5 hover:text-green-400 cursor-pointer">
+                    <RiRepeatLine />{" "}
+                    <div className="md:text-base text-sm"> 1.2k</div>
                   </div>
-                  <div className=" flex flex-row items-center gap-1 hover:text-pink-500 cursor-pointer">
-                    <FaRegHeart /> <div className="text-base"> 1.2k</div>
+                  <div className=" flex flex-row items-center md:gap-1 gap-0.5 hover:text-pink-500 cursor-pointer">
+                    <FaRegHeart />{" "}
+                    <div className="md:text-base text-sm"> 1.2k</div>
                   </div>
-                  <div className=" flex flex-row items-center gap-1 hover:text-blue-400 cursor-pointer">
-                    <VscGraph /> <div className="text-base"> 1.2k</div>
+                  <div className=" flex flex-row items-center md:gap-1 gap-0.5 hover:text-blue-400 cursor-pointer">
+                    <VscGraph />{" "}
+                    <div className="md:text-base text-sm"> 1.2k</div>
                   </div>
-                  <div className="hidden md:flex flex-row items-center gap-1 hover:text-blue-400 cursor-pointer">
-                    <FaRegBookmark /> <div className="text-base"> 1.2k</div>
+                  <div className="flex flex-row items-center  md:gap-3.5 gap-2">
+                    <div className=" md:flex flex-row items-center gap-1 hover:text-blue-400 cursor-pointer">
+                      <FaRegBookmark />
+                    </div>
+                    <div className=" md:flex flex-row items-center gap-1 hover:text-blue-400 cursor-pointer">
+                      <FiShare />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -76,7 +85,7 @@ const Post = (props) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Post;
+export default Post

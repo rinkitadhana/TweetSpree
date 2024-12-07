@@ -1,6 +1,6 @@
 const Skeleton = () => {
   return (
-    <div className=" mt-3">
+    <div className=" mt-3 animate-pulse">
       <div className=" flex justify-center md:flex-row flex-col cursor-pointer ">
         <div className=" md:w-2/3 mx-2 rounded-sm md:p-4 p-3 h-40 bg-white/15 ">
           <div className=" flex flex-col gap-3">
@@ -13,7 +13,7 @@ const Skeleton = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Skeleton;
+export default Skeleton

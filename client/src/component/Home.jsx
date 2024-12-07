@@ -1,13 +1,12 @@
 import { BsStars } from "react-icons/bs"
-import { FaStar } from "react-icons/fa"
 import { FaArrowRightLong } from "react-icons/fa6"
-import Footer from "../parts/Footer"
-import Post from "../parts/Post"
+import Footer from "./Footer"
+import Post from "./Post"
 import React, { useEffect, useState } from "react"
-import Skeleton from "../parts/Skeleton"
+import Skeleton from "./Skeleton"
 import axios from "axios"
 import Dummies from "../parts/Data"
-
+import Header from "./Header"
 const Home = () => {
   const [loading, setLoading] = useState(true)
   const [isVisible, setIsVisible] = useState(false)
@@ -51,20 +50,7 @@ const Home = () => {
     <div className=" dark">
       <div className="flex justify-center md:flex-row flex-col text-white">
         <div className=" md:w-3/5  min-h-screen">
-          <div className=" flex flex-row justify-between px-4 mt-8">
-            <div className="  font-semibold text-3xl font-bricolage">
-              Tweet<span className="text-pink-500">Spree</span>
-            </div>
-            <a
-              href="https://github.com/rinkitadhana/TweetSpree"
-              target="_blank"
-            >
-              <div className=" flex flex-row gap-1 items-center bg-white/40 hover:bg-white/30 w-fit rounded-md p-2 text-sm font-semibold text-white hover:cursor-pointer">
-                <FaStar className="text-yellow-400 text-lg" />
-                On Github
-              </div>
-            </a>
-          </div>
+          <Header />
           <div>
             <div className=" font-bricolage md:text-6xl font-bold  mt-10 text-4xl px-2 md:px-0   text-center">
               Get <span className=" text-green-400">facts</span>,{" "}

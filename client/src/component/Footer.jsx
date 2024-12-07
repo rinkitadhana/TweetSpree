@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className=" mt-16 mb-3">
+    <div className=" my-6">
       <div className="flex flex-col items-center font-semibold text-white">
         <div>Thank you for Visiting!</div>
         <div>©2024 TweetSpree</div>
