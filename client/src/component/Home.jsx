@@ -4,23 +4,13 @@ import Footer from "./Footer"
 import Post from "./Post"
 import React, { useEffect, useState } from "react"
 import Skeleton from "./Skeleton"
-import axios from "axios"
 import Dummies from "../parts/Data"
 import Header from "./Header"
 const Home = () => {
   const [loading, setLoading] = useState(true)
   const [isVisible, setIsVisible] = useState(false)
   const [randomQuestions, setRandomQuestions] = useState([])
-  const [data, setData] = useState([])
 
-  useEffect(() => {
-    axios
-      .get("https://tweet-spree-api.vercel.app/api/data")
-      .then((Response) => [setData(Response.data)])
-      .catch((error) => {
-        console.log(error)
-      })
-  })
   const generateRandomQuestions = () => {
     const shuffledQuestions = Dummies.sort(() => 0.5 - Math.random())
     const selectedQuestions = shuffledQuestions.slice(0, 5)
@@ -28,7 +18,7 @@ const Home = () => {
   }
 
   useEffect(() => {
-    generateRandomQuestions() // Generate questions when the component first mounts
+    generateRandomQuestions()
   }, [])
 
   const showDiv = () => {
@@ -70,7 +60,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className=" flex justify-center mt-7">
+          <div className=" select-none flex justify-center mt-7">
             <div
               onClick={showDiv}
               className=" group mb-5 bg-blue-500 hover:bg-blue-400 w-fit rounded-md py-1 px-3 cursor-pointer font-semibold text-lg flex flex-row gap-1 items-center"

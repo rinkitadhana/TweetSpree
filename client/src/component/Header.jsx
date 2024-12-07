@@ -5,7 +5,7 @@ import { FaGithub } from "react-icons/fa6"
 const Header = () => {
   return (
     <>
-      <div className=" flex flex-row justify-between px-4 my-5">
+      <div className=" select-none flex flex-row justify-between px-4 my-5">
         <div className=" flex flex-row gap-0.5 items-center font-semibold text-3xl font-bricolage">
           <BsTwitter className="text-blue-500 md:size-10 size-8" />
           <span className="text-pink-500">spree</span>

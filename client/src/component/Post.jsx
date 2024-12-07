@@ -39,7 +39,7 @@ const Post = (props) => {
                     Gruz
                   </div>
                   <div className=" text-gray-400">@damnGruz ·</div>
-                  <div className="hidden md:block text-gray-400  hover:underline">
+                  <div className="block text-gray-400  hover:underline">
                     {todayMonth} {todayDate}
                   </div>
                 </div>
