@@ -49,29 +49,33 @@ const Home = () => {
               programing to boost your{" "}
               <span className=" text-pink-500">Twitter engagement!</span>
             </div>
-            <div className="text-center md:px-36 px-2 text-sm md:text-base mt-4 tracking-tight font-bricolage">
-              Click generate, post, and watch your Twitter blow up! No more
-              guesswork—just instant results that make your feed stand out..🔥
-            </div>
-            <div className=" flex justify-center">
-              <div className="font-semibold text-purple-400 mt-2 flex flex-row gap-1 items-center text-xs md:text-base">
-                All posts are generated with the assistance of AI
-                <BsStars className="text-yellow-400" />
+            <div className="flex flex-col gap-4">
+              <div className="text-center md:px-36 px-2 text-sm md:text-base mt-4 tracking-tight font-bricolage">
+                Click generate, post, and watch your Twitter blow up! No more
+                guesswork—just instant results that make your feed stand out..🔥
+              </div>
+              <div className=" flex justify-center">
+                <div className="  font-semibold text-purple-400  flex flex-row gap-1 items-center text-xs md:text-base">
+                  Posts are generated from stored data, sourced from various
+                  sites, and AI
+                  <BsStars className="text-yellow-400" />
+                </div>
+              </div>
+
+              <div className=" select-none flex justify-center ">
+                <button
+                  onClick={showDiv}
+                  className=" group  bg-blue-500 hover:bg-blue-400 w-fit rounded-md py-1 px-3 cursor-pointer font-semibold text-lg flex flex-row gap-1 items-center"
+                >
+                  <BsStars className="text-yellow-400" />
+                  Generate
+                  <FaArrowRightLong className=" text-sm group-hover:-rotate-45 transition-all delay-75" />
+                </button>
               </div>
             </div>
           </div>
-          <div className=" select-none flex justify-center mt-7">
-            <div
-              onClick={showDiv}
-              className=" group mb-5 bg-blue-500 hover:bg-blue-400 w-fit rounded-md py-1 px-3 cursor-pointer font-semibold text-lg flex flex-row gap-1 items-center"
-            >
-              <BsStars className="text-yellow-400" />
-              Generate
-              <FaArrowRightLong className=" text-sm group-hover:-rotate-45 transition-all delay-75" />
-            </div>
-          </div>
           {isVisible && (
-            <div>
+            <div className="flex flex-col gap-2 my-5">
               {randomQuestions.map((question, index) => (
                 <div key={index}>
                   {loading ? (

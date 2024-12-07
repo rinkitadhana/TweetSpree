@@ -22,7 +22,7 @@ const Post = (props) => {
   const todayDate = date.getDate()
   const todayMonth = month[date.getMonth()]
   return (
-    <div className=" mt-3">
+    <div className="">
       <div className=" flex justify-center md:flex-row flex-col cursor-pointer">
         <div className=" md:w-2/3 border mx-2 border-gray-600 rounded-sm md:p-4 p-3 ">
           <div className="flex flex-row gap-3 items-start">
