@@ -70,8 +70,9 @@ const Home = () => {
                 >
                   {loading ? (
                     <div className="flex flex-row gap-2 items-center">
-                      <FaSpinner className="animate-spin " />
+                      <BsStars className="text-yellow-400" />
                       <div>Generating</div>
+                      <FaSpinner className="animate-spin " />
                     </div>
                   ) : (
                     <div className="flex flex-row gap-1 items-center">

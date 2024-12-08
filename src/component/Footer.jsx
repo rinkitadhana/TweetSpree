@@ -20,7 +20,7 @@ const Footer = () => {
 
         <div>
           <a
-            href=""
+            href="https://twitter.com/intent/follow?screen_name=damnGruz"
             target="_blank"
             className=" flex gap-1 items-center border rounded-full px-3 py-1 animate-pulse hover:bg-white hover:text-black transition-all hover:animate-none"
           >
