@@ -49,8 +49,7 @@ A project to boost your Twitter engagement by generating a variety of programmin
   * [Screenshots](#screenshots)
   * [Tech Stack](#tech-stack)
   * [Features](#features)
-- [Getting Started](#getting-started)
-  * [Run Locally](#run-locally)
+
 - [Contributing](#contributing)
 - [Contact](#contact)
 
@@ -80,13 +79,7 @@ A project to boost your Twitter engagement by generating a variety of programmin
 
   </ul>
 </details>
-<details>
-  <summary>Api</summary>
-  <ul>
-        <li><a href="">NodeJS</a></li>
-        <li><a href="">Express</a></li>
-  </ul>
-</details>
+
 
 <!-- Features -->
 ### Features
