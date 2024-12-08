@@ -6,8 +6,9 @@ import React, { useEffect, useState } from "react"
 import Skeleton from "./Skeleton"
 import Dummies from "../parts/Data"
 import Header from "./Header"
+import { FaSpinner } from "react-icons/fa"
 const Home = () => {
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
   const [randomQuestions, setRandomQuestions] = useState([])
 
@@ -22,11 +23,12 @@ const Home = () => {
   }, [])
 
   const showDiv = () => {
+    setLoading(true)
     setIsVisible(true)
     setTimeout(() => {
       setLoading(false)
     }, 1500)
-    setLoading(true)
+
     generateRandomQuestions()
   }
 
@@ -64,11 +66,20 @@ const Home = () => {
               <div className=" select-none flex justify-center ">
                 <button
                   onClick={showDiv}
-                  className=" group  bg-blue-500 hover:bg-blue-400 w-fit rounded-md py-1 px-3 cursor-pointer font-semibold text-lg flex flex-row gap-1 items-center"
+                  className=" group  bg-blue-500 hover:bg-blue-400 w-fit rounded-md py-1 px-3 cursor-pointer font-semibold text-lg "
                 >
-                  <BsStars className="text-yellow-400" />
-                  Generate
-                  <FaArrowRightLong className=" text-sm group-hover:-rotate-45 transition-all delay-75" />
+                  {loading ? (
+                    <div className="flex flex-row gap-2 items-center">
+                      <FaSpinner className="animate-spin " />
+                      <div>Generating</div>
+                    </div>
+                  ) : (
+                    <div className="flex flex-row gap-1 items-center">
+                      <BsStars className="text-yellow-400" />
+                      Generate
+                      <FaArrowRightLong className=" text-sm group-hover:-rotate-45 transition-all delay-75" />
+                    </div>
+                  )}
                 </button>
               </div>
             </div>
