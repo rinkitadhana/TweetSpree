@@ -1,6 +1,4 @@
-
 <div align="center">
-
 
   <img src="https://github.com/user-attachments/assets/92cf691d-a685-44e1-960d-eafa88adfbf6" alt="logo" width="200" height="auto" />
   <h1>TweetSpree</h1>
@@ -43,32 +41,31 @@ A project to boost your Twitter engagement by generating a variety of programmin
 <br />
 
 <!-- Table of Contents -->
-#  Table of Contents
+
+# Table of Contents
 
 - [About the Project](#about-the-project)
-  * [Screenshots](#screenshots)
-  * [Tech Stack](#tech-stack)
-  * [Features](#features)
-
+  - [Screenshots](#screenshots)
+  - [Tech Stack](#tech-stack)
+  - [Features](#features)
 - [Contributing](#contributing)
 - [Contact](#contact)
 
-  
-
 <!-- About the Project -->
-##  About the Project
 
+## About the Project
 
 <!-- Screenshots -->
-###  Screenshots
+
+### Screenshots
 
 <div align="center"> 
   <img src="https://github.com/user-attachments/assets/a05c22f5-fa02-41fc-b124-74a571c79adb" alt="screenshot" />
 </div>
 
-
 <!-- TechStack -->
-###  Tech Stack
+
+### Tech Stack
 
 <details>
   <summary>Client</summary>
@@ -80,30 +77,27 @@ A project to boost your Twitter engagement by generating a variety of programmin
   </ul>
 </details>
 
-
 <!-- Features -->
+
 ### Features
 
 - Generate Tweets related to programming that can boost your engagement
 - Simple UI/UX
 
-
 <!-- Contributing -->
+
 ## Contributing
 
 <a href="https://github.com/rinkitadhana/The-Daily-Crimes/contributors">
   <img src="https://contrib.rocks/image?repo=rinkitadhana/The-Daily-Crimes" />
 </a>
 
-
 Contributions are always welcome!
 
-
-
 <!-- Contact -->
-##  Contact
+
+## Contact
 
 Rinkit Adhana - [@damnGruz](https://twitter.com/damnGruz) - therinkit@gmail.com
 
 Portfolio - [therinkit.online](https://therinkit.online)
-
