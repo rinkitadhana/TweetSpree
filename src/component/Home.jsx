@@ -7,6 +7,7 @@ import Skeleton from "./Skeleton"
 import Dummies from "../parts/Data"
 import Header from "./Header"
 import { FaSpinner } from "react-icons/fa"
+import { ImSpinner11 } from "react-icons/im"
 const Home = () => {
   const [loading, setLoading] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
@@ -69,10 +70,9 @@ const Home = () => {
                   className=" group  bg-blue-500 hover:bg-blue-400 w-fit rounded-md py-1 px-3 cursor-pointer font-semibold text-lg "
                 >
                   {loading ? (
-                    <div className="flex flex-row gap-2 items-center">
-                      <BsStars className="text-yellow-400" />
+                    <div className="flex flex-row gap-1.5 items-center">
                       <div>Generating</div>
-                      <FaSpinner className="animate-spin " />
+                      <ImSpinner11 className=" size-4 animate-spin " />
                     </div>
                   ) : (
                     <div className="flex flex-row gap-1 items-center">
