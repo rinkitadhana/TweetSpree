@@ -33,9 +33,9 @@ const Post = (props) => {
   return (
     <div>
       <div className=" flex justify-center md:flex-row flex-col cursor-pointer">
-        <div className=" md:w-2/3 border mx-2 border-gray-600 rounded-sm  p-3 ">
+        <div className="  md:w-2/3 border mx-2 border-gray-600 rounded-sm  p-3 ">
           <div className="flex flex-row gap-3 items-start">
-            <div className=" rounded-full size-11 ">
+            <div className=" select-none rounded-full size-11 ">
               <img
                 className=" rounded-full size-10"
                 src="./userIMG/dp.jpeg"
@@ -43,7 +43,7 @@ const Post = (props) => {
               />
             </div>
 
-            <div className=" flex flex-col gap-1 w-full">
+            <div className="   flex flex-col gap-1 w-full">
               <div className=" flex flex-row justify-between">
                 <div className="flex flex-row items-center gap-1">
                   <div className=" md:text-[1.110rem] font-semibold hover:underline">
@@ -56,14 +56,14 @@ const Post = (props) => {
                 </div>
                 <div
                   onClick={props.post}
-                  className=" font-semibold flex justify-center text-sm gap-1 items-center border rounded-full cursor-pointer  px-2 py-0.5 hover:bg-white/20 transition-all duration-200"
+                  className=" select-none font-semibold flex justify-center text-sm gap-1 items-center border rounded-full cursor-pointer  px-2 py-0.5 hover:bg-white/20 transition-all duration-200"
                 >
                   <FiShare />
                   Post
                 </div>
               </div>
               <div>{props.des}</div>
-              <div className=" mt-2 md:mt-0.5">
+              <div className=" mt-2 md:mt-0.5 select-none">
                 <div className=" flex flex-row justify-between text-xs md:text-base">
                   <div className=" transition-all duration-200 group flex gap-1 md:gap-0 flex-row items-center md:hover:text-blue-400 hover:text-gray-400 cursor-pointer">
                     <div className="md:group-hover:bg-blue-400/15 rounded-full md:size-8 flex justify-center items-center ">
