@@ -1,9 +1,13 @@
+import { useState } from "react"
 import { FaRegBookmark, FaRegComment, FaRegHeart } from "react-icons/fa"
+import { FaHeart } from "react-icons/fa6"
 import { FiShare } from "react-icons/fi"
 import { RiRepeatLine } from "react-icons/ri"
+import { TbUpload } from "react-icons/tb"
 import { VscGraph } from "react-icons/vsc"
 
 const Post = (props) => {
+  const [like, setLike] = useState(false)
   const month = [
     "Jan",
     "Feb",
@@ -22,7 +26,7 @@ const Post = (props) => {
   const todayDate = date.getDate()
   const todayMonth = month[date.getMonth()]
   return (
-    <div className="">
+    <div>
       <div className=" flex justify-center md:flex-row flex-col cursor-pointer">
         <div className=" md:w-2/3 border mx-2 border-gray-600 rounded-sm  p-3 ">
           <div className="flex flex-row gap-3 items-start">
@@ -47,37 +51,51 @@ const Post = (props) => {
                 </div>
                 <div
                   onClick={props.post}
-                  className=" font-semibold flex justify-center text-sm gap-1 items-center border rounded-full cursor-pointer  px-2 py-0.5 hover:bg-white/20"
+                  className=" font-semibold flex justify-center text-sm gap-1 items-center border rounded-full cursor-pointer  px-2 py-0.5 hover:bg-white/20 transition-all duration-200"
                 >
                   <FiShare />
                   Post
                 </div>
               </div>
               <div>{props.des}</div>
-              <div className="mt-2">
+              <div className=" mt-2 md:mt-0.5">
                 <div className=" flex flex-row justify-between text-xs md:text-base">
-                  <div className=" flex flex-row items-center md:gap-1 gap-0.5 hover:text-blue-400 cursor-pointer">
-                    <FaRegComment />{" "}
-                    <div className="md:text-base text-sm"> 1.2k</div>
+                  <div className=" transition-all duration-200 group flex gap-0.5 md:gap-0 flex-row items-center md:hover:text-blue-400 hover:text-gray-400 cursor-pointer">
+                    <div className="md:group-hover:bg-blue-400/15 rounded-full md:size-8 flex justify-center items-center ">
+                      <FaRegComment />
+                    </div>
+                    <div className="md:text-base text-sm"> 99</div>
                   </div>
-                  <div className=" flex flex-row items-center md:gap-1 gap-0.5 hover:text-green-400 cursor-pointer">
-                    <RiRepeatLine />{" "}
-                    <div className="md:text-base text-sm"> 1.2k</div>
+                  <div className=" transition-all duration-200 group flex gap-0.5 md:gap-0 flex-row items-center md:hover:text-green-400 hover:text-gray-400 cursor-pointer">
+                    <div className="md:group-hover:bg-green-400/15 rounded-full md:size-8 flex justify-center items-center ">
+                      <RiRepeatLine />
+                    </div>
+                    <div className="md:text-base text-sm"> 20</div>
                   </div>
-                  <div className=" flex flex-row items-center md:gap-1 gap-0.5 hover:text-pink-500 cursor-pointer">
-                    <FaRegHeart />{" "}
-                    <div className="md:text-base text-sm"> 1.2k</div>
+                  <div
+                    onClick={() => setLike((prev) => !prev)}
+                    className={` ${
+                      like ? "text-pink-500" : ""
+                    } transition-all duration-200 group flex gap-0.5 md:gap-0 flex-row items-center md:hover:text-pink-500  hover:text-gray-400 cursor-pointer`}
+                  >
+                    <div className="md:group-hover:bg-pink-500/15 rounded-full md:size-8 flex justify-center items-center ">
+                      {like ? <FaHeart /> : <FaRegHeart />}
+                    </div>
+                    <div className="md:text-base text-sm"> 6.9k</div>
                   </div>
-                  <div className=" flex flex-row items-center md:gap-1 gap-0.5 hover:text-blue-400 cursor-pointer">
-                    <VscGraph />{" "}
-                    <div className="md:text-base text-sm"> 1.2k</div>
+                  <div className=" transition-all duration-200 group flex gap-0.5 md:gap-0 flex-row items-center md:hover:text-blue-400 hover:text-gray-400 cursor-pointer">
+                    <div className="md:group-hover:bg-blue-400/15 rounded-full md:size-8 flex justify-center items-center ">
+                      <VscGraph />
+                    </div>
+                    <div className="md:text-base text-sm"> 69k</div>
                   </div>
-                  <div className="flex flex-row items-center  md:gap-3.5 gap-2">
-                    <div className=" md:flex flex-row items-center gap-1 hover:text-blue-400 cursor-pointer">
+
+                  <div className="flex flex-row items-center md:gap-0 gap-2">
+                    <div className=" md:flex flex-row   hover:text-blue-400 hover:bg-blue-400/15 rounded-full md:size-8 flex justify-center items-center cursor-pointer transition-all duration-200">
                       <FaRegBookmark />
                     </div>
-                    <div className=" md:flex flex-row items-center gap-1 hover:text-blue-400 cursor-pointer">
-                      <FiShare />
+                    <div className=" md:flex flex-row   hover:text-blue-400 hover:bg-blue-400/15 rounded-full md:size-8 flex justify-center items-center cursor-pointer transition-all duration-200">
+                      <TbUpload className=" md:size-5 size-4" />
                     </div>
                   </div>
                 </div>
