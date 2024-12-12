@@ -26,11 +26,13 @@ const Post = (props) => {
       <div className=" flex justify-center md:flex-row flex-col cursor-pointer">
         <div className=" md:w-2/3 border mx-2 border-gray-600 rounded-sm  p-3 ">
           <div className="flex flex-row gap-3 items-start">
-            <img
-              className=" rounded-full size-10 border border-gray-600 "
-              src="./userIMG/dp.jpeg"
-              alt="profile-pic"
-            />
+            <div className=" rounded-full size-11 ">
+              <img
+                className=" rounded-full size-10"
+                src="./userIMG/dp.jpeg"
+                alt="profile-pic"
+              />
+            </div>
 
             <div className=" flex flex-col gap-1 w-full">
               <div className=" flex flex-row justify-between">
