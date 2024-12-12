@@ -6,7 +6,6 @@ import React, { useEffect, useState } from "react"
 import Skeleton from "./Skeleton"
 import Dummies from "../parts/Data"
 import Header from "./Header"
-import { FaSpinner } from "react-icons/fa"
 import { ImSpinner11 } from "react-icons/im"
 const Home = () => {
   const [loading, setLoading] = useState(false)
@@ -40,7 +39,7 @@ const Home = () => {
     window.open(url, "_blank")
   }
   return (
-    <div className=" dark">
+    <div className="">
       <div className="flex justify-center md:flex-row flex-col text-white">
         <div className=" md:w-3/5  min-h-screen">
           <Header />
