@@ -47,7 +47,7 @@ const Home = () => {
         <div className="flex flex-col gap-4">
           <div className="text-center md:px-36 px-2 text-sm md:text-base mt-4 tracking-tight font-bricolage">
             Click generate then post, and watch your Twitter blow up! No more
-            guesswork—just instant results that make your feed stand out..🔥
+            guesswork, just instant results that make your feed stand out.🔥
           </div>
           <div className=" px-4  flex   justify-center">
             <div className=" flex gap-1 text-center items-center  font-semibold text-purple-400    text-xs md:text-base">
