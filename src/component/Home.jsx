@@ -18,18 +18,13 @@ const Home = () => {
     setRandomQuestions(selectedQuestions)
   }
 
-  useEffect(() => {
-    generateRandomQuestions()
-  }, [])
-
   const showDiv = () => {
+    generateRandomQuestions()
     setLoading(true)
     setIsVisible(true)
     setTimeout(() => {
       setLoading(false)
     }, 1500)
-
-    generateRandomQuestions()
   }
 
   const shareOnTwitter = (text) => {
@@ -51,7 +46,7 @@ const Home = () => {
         </div>
         <div className="flex flex-col gap-4">
           <div className="text-center md:px-36 px-2 text-sm md:text-base mt-4 tracking-tight font-bricolage">
-            Click generate, post, and watch your Twitter blow up! No more
+            Click generate then post, and watch your Twitter blow up! No more
             guesswork—just instant results that make your feed stand out..🔥
           </div>
           <div className=" px-4  flex   justify-center">
