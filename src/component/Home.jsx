@@ -39,72 +39,68 @@ const Home = () => {
     window.open(url, "_blank")
   }
   return (
-    <div className="">
-      <div className="flex justify-center md:flex-row flex-col text-white">
-        <div className=" md:w-3/5  min-h-screen">
-          <Header />
-          <div>
-            <div className=" font-bricolage md:text-6xl font-bold  mt-10 text-4xl px-2 md:px-0   text-center">
-              Get <span className=" text-green-400">facts</span>,{" "}
-              <span className=" text-green-400">advice</span>, and{" "}
-              <span className=" text-green-400">fun questions</span> about
-              programing to boost your{" "}
-              <span className=" text-pink-500">Twitter engagement!</span>
-            </div>
-            <div className="flex flex-col gap-4">
-              <div className="text-center md:px-36 px-2 text-sm md:text-base mt-4 tracking-tight font-bricolage">
-                Click generate, post, and watch your Twitter blow up! No more
-                guesswork—just instant results that make your feed stand out..🔥
-              </div>
-              <div className=" px-4  flex   justify-center">
-                <div className=" flex gap-1 text-center items-center  font-semibold text-purple-400    text-xs md:text-base">
-                  All the posts are generated from stored data, sourced from
-                  various sites, and AI ✨
-                </div>
-              </div>
-
-              <div className=" select-none flex justify-center ">
-                <button
-                  onClick={showDiv}
-                  className=" group  bg-blue-500 hover:bg-blue-400 w-fit rounded-md py-1 px-3 cursor-pointer font-semibold text-lg "
-                >
-                  {loading ? (
-                    <div className="flex flex-row gap-1.5 items-center">
-                      <div>Generating</div>
-                      <ImSpinner11 className=" size-4 animate-spin " />
-                    </div>
-                  ) : (
-                    <div className="flex flex-row gap-1 items-center">
-                      <BsStars className="text-yellow-400" />
-                      Generate
-                      <FaArrowRightLong className=" text-sm group-hover:-rotate-45 transition-all delay-75" />
-                    </div>
-                  )}
-                </button>
-              </div>
+    <section>
+      <Header />
+      <div>
+        <div className=" font-bricolage md:text-6xl font-bold  mt-10 text-4xl px-2 md:px-0   text-center">
+          Get <span className=" text-green-400">facts</span>,{" "}
+          <span className=" text-green-400">advice</span>, and{" "}
+          <span className=" text-green-400">fun questions</span> about
+          programing to boost your{" "}
+          <span className=" text-pink-500">Twitter engagement!</span>
+        </div>
+        <div className="flex flex-col gap-4">
+          <div className="text-center md:px-36 px-2 text-sm md:text-base mt-4 tracking-tight font-bricolage">
+            Click generate, post, and watch your Twitter blow up! No more
+            guesswork—just instant results that make your feed stand out..🔥
+          </div>
+          <div className=" px-4  flex   justify-center">
+            <div className=" flex gap-1 text-center items-center  font-semibold text-purple-400    text-xs md:text-base">
+              All the posts are generated from stored data, sourced from various
+              sites, and AI ✨
             </div>
           </div>
-          {isVisible && (
-            <div className="flex flex-col gap-2 my-5">
-              {randomQuestions.map((question, index) => (
-                <div key={index}>
-                  {loading ? (
-                    <Skeleton />
-                  ) : (
-                    <Post
-                      des={question}
-                      post={() => shareOnTwitter(`${question}`)}
-                    />
-                  )}
-                </div>
-              ))}
-            </div>
-          )}
 
-          <Footer />
+          <div className=" select-none flex justify-center ">
+            <button
+              onClick={showDiv}
+              className=" group  bg-blue-500 hover:bg-blue-400 w-fit rounded-md py-1 px-3 cursor-pointer font-semibold text-lg "
+            >
+              {loading ? (
+                <div className="flex flex-row gap-1.5 items-center">
+                  <div>Generating</div>
+                  <ImSpinner11 className=" size-4 animate-spin " />
+                </div>
+              ) : (
+                <div className="flex flex-row gap-1 items-center">
+                  <BsStars className="text-yellow-400" />
+                  Generate
+                  <FaArrowRightLong className=" text-sm group-hover:-rotate-45 transition-all delay-75" />
+                </div>
+              )}
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+      {isVisible && (
+        <div className="flex flex-col gap-2 my-5">
+          {randomQuestions.map((question, index) => (
+            <div key={index}>
+              {loading ? (
+                <Skeleton />
+              ) : (
+                <Post
+                  des={question}
+                  post={() => shareOnTwitter(`${question}`)}
+                />
+              )}
+            </div>
+          ))}
+        </div>
+      )}
+
+      <Footer />
+    </section>
   )
 }
 

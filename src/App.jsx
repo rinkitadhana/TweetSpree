@@ -1,11 +1,12 @@
-import Home from "./component/Home";
+import Home from "./component/Home"
+import Screen from "./Layout/Screen"
 
 const App = () => {
   return (
-    <div>
+    <Screen>
       <Home />
-    </div>
-  );
-};
+    </Screen>
+  )
+}
 
-export default App;
+export default App
