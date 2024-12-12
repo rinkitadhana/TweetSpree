@@ -76,7 +76,7 @@ const Post = (props) => {
                     onClick={() => setLike((prev) => !prev)}
                     className={` ${
                       like ? "text-pink-500" : ""
-                    } transition-all duration-200 group flex gap-0.5 md:gap-0 flex-row items-center md:hover:text-pink-500  hover:text-gray-400 cursor-pointer`}
+                    } transition-all duration-200 group flex gap-1 md:gap-0 flex-row items-center md:hover:text-pink-500  cursor-pointer`}
                   >
                     <div className="md:group-hover:bg-pink-500/15 rounded-full md:size-8 flex justify-center items-center ">
                       {like ? <FaHeart /> : <FaRegHeart />}
