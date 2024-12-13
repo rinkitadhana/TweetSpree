@@ -36,8 +36,8 @@ const Home = () => {
   return (
     <section>
       <Header />
-      <div>
-        <div className=" font-bricolage md:text-6xl font-bold  mt-10 text-4xl px-2 md:px-0   text-center">
+      <div className=" my-8">
+        <div className=" font-bricolage md:text-6xl font-bold  text-4xl px-2 md:px-0   text-center">
           Get <span className=" text-green-400">facts</span>,{" "}
           <span className=" text-green-400">advice</span>, and{" "}
           <span className=" text-green-400">fun questions</span> about

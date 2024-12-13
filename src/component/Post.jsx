@@ -103,7 +103,7 @@ const Post = (props) => {
                     <div className=" md:flex flex-row  hover:text-gray-400 md:hover:text-blue-400 md:hover:bg-blue-400/15 rounded-full md:size-8 flex justify-center items-center cursor-pointer transition-all duration-200">
                       <FaRegBookmark className="size-4" />
                     </div>
-                    <div className=" md:flex flex-row  hover:text-gra md:hover:text-blue-400 md:  hover:bg-blue-400/15 rounded-full md:size-8 flex justify-center items-center cursor-pointer transition-all duration-200">
+                    <div className=" md:flex flex-row  hover:text-gray-400 md:hover:text-blue-400 md:  hover:bg-blue-400/15 rounded-full md:size-8 flex justify-center items-center cursor-pointer transition-all duration-200">
                       <HiOutlineUpload className="  size-5 " />
                     </div>
                   </div>
