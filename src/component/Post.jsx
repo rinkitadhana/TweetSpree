@@ -65,13 +65,13 @@ const Post = (props) => {
               <div>{props.des}</div>
               <div className=" mt-2 md:mt-0.5 select-none">
                 <div className=" flex flex-row justify-between text-xs md:text-base">
-                  <div className=" transition-all duration-200 group flex gap-1 md:gap-0 flex-row items-center md:hover:text-blue-400 hover:text-gray-400 cursor-pointer">
+                  <div className=" transition-all duration-200 group flex gap-0.5 md:gap-0 flex-row items-center md:hover:text-blue-400 hover:text-gray-400 cursor-pointer">
                     <div className="md:group-hover:bg-blue-400/15 rounded-full md:size-8 flex justify-center items-center ">
                       <FaRegComment className="size-4" />
                     </div>
                     <div className="md:text-base text-sm"> 99</div>
                   </div>
-                  <div className=" transition-all duration-200 group flex gap-1 md:gap-0 flex-row items-center md:hover:text-green-400 hover:text-gray-400 cursor-pointer">
+                  <div className=" transition-all duration-200 group flex gap-0.5 md:gap-0 flex-row items-center md:hover:text-green-400 hover:text-gray-400 cursor-pointer">
                     <div className="md:group-hover:bg-green-400/15 rounded-full md:size-8 flex justify-center items-center ">
                       <RiRepeatLine className="size-4" />
                     </div>
@@ -81,7 +81,7 @@ const Post = (props) => {
                     onClick={() => setLike((prev) => !prev)}
                     className={` ${
                       like ? "text-pink-500" : ""
-                    } transition-all duration-200 group flex gap-1 md:gap-0 flex-row items-center md:hover:text-pink-500  cursor-pointer`}
+                    } transition-all duration-200 group flex gap-0.5 md:gap-0 flex-row items-center md:hover:text-pink-500  cursor-pointer`}
                   >
                     <div className="md:group-hover:bg-pink-500/15 rounded-full md:size-8 flex justify-center items-center ">
                       {like ? (
@@ -92,7 +92,7 @@ const Post = (props) => {
                     </div>
                     <div className="md:text-base text-sm"> 6.9k</div>
                   </div>
-                  <div className=" transition-all duration-200 group flex gap-1 md:gap-0 flex-row items-center md:hover:text-blue-400 hover:text-gray-400 cursor-pointer">
+                  <div className=" transition-all duration-200 group flex gap-0.5 md:gap-0 flex-row items-center md:hover:text-blue-400 hover:text-gray-400 cursor-pointer">
                     <div className="md:group-hover:bg-blue-400/15 rounded-full md:size-8 flex justify-center items-center ">
                       <VscGraph className="size-4" />
                     </div>
@@ -100,10 +100,10 @@ const Post = (props) => {
                   </div>
 
                   <div className="flex flex-row items-center md:gap-0 gap-2">
-                    <div className=" md:flex flex-row   hover:text-blue-400 hover:bg-blue-400/15 rounded-full md:size-8 flex justify-center items-center cursor-pointer transition-all duration-200">
+                    <div className=" md:flex flex-row  hover:text-gray-400 md:hover:text-blue-400 md:hover:bg-blue-400/15 rounded-full md:size-8 flex justify-center items-center cursor-pointer transition-all duration-200">
                       <FaRegBookmark className="size-4" />
                     </div>
-                    <div className=" md:flex flex-row   hover:text-blue-400 hover:bg-blue-400/15 rounded-full md:size-8 flex justify-center items-center cursor-pointer transition-all duration-200">
+                    <div className=" md:flex flex-row  hover:text-gra md:hover:text-blue-400 md:  hover:bg-blue-400/15 rounded-full md:size-8 flex justify-center items-center cursor-pointer transition-all duration-200">
                       <HiOutlineUpload className="  size-5 " />
                     </div>
                   </div>
