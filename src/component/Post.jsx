@@ -7,7 +7,7 @@ import { HiOutlineUpload } from "react-icons/hi"
 import { IoShareOutline } from "react-icons/io5"
 import { RiRepeatLine } from "react-icons/ri"
 import { RxUpload } from "react-icons/rx"
-import { TbUpload } from "react-icons/tb"
+import { TbBrandGoogleAnalytics, TbUpload } from "react-icons/tb"
 import { TfiUpload } from "react-icons/tfi"
 import { VscGraph } from "react-icons/vsc"
 
@@ -96,7 +96,7 @@ const Post = (props) => {
                   </div>
                   <div className=" transition-all duration-200 group flex gap-0.5 md:gap-0 flex-row items-center md:hover:text-blue-400 hover:text-gray-400 cursor-pointer">
                     <div className="md:group-hover:bg-blue-400/15 rounded-full md:size-8 flex justify-center items-center ">
-                      <VscGraph className="size-4" />
+                      <TbBrandGoogleAnalytics className="size-4" />
                     </div>
                     <div className="md:text-base text-sm"> 69k</div>
                   </div>
