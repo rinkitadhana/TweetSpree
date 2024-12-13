@@ -35,9 +35,9 @@ const Post = (props) => {
       <div className=" flex justify-center md:flex-row flex-col cursor-pointer">
         <div className="  md:w-2/3 border mx-2 border-gray-600 rounded-sm  p-3 ">
           <div className="flex flex-row gap-3 items-start">
-            <div className=" select-none rounded-full size-11 ">
+            <div className=" select-none rounded-full size-11 object-cover ">
               <img
-                className=" rounded-full size-10"
+                className=" rounded-full size-10 object-cover"
                 src="./userIMG/dp.jpeg"
                 alt="profile-pic"
               />
